@@ -1,0 +1,43 @@
+﻿<Window x:Class="Contact_Wizard.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Contact_Wizard"
+        mc:Ignorable="d"
+        Title="Contact-Wizard | Utilidades para tu agenda" Height="403.03" Width="610.177" Icon="icon_app.png" ResizeMode="CanMinimize">
+    <Grid>
+        <Border x:Name="bordeLista" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Margin="10,10,0,10" Width="240">
+            <ListBox x:Name="listBoxContactos" Margin="-1" SelectionChanged="listBoxContactos_SelectionChanged"/>
+        </Border>
+        <Grid x:Name="gridArchivo" Margin="261,10,10,0" Height="60" VerticalAlignment="Top">
+            <Label x:Name="lblNombreArchivo" Content="Nombre del archivo:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtNombreArchivo" Height="23" Margin="118,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" AcceptsReturn="False"/>
+            <Button x:Name="btnAbrir" Content="Abrir XML" HorizontalAlignment="Right" Margin="0,32,0,3" Width="70" Click="btnAbrir_Click"/>
+            <Button x:Name="btnGenerarArchivo" Content="Generar" Margin="0,32,75,3" HorizontalAlignment="Right" Width="60" Click="btnGenerarArchivo_Click"/>
+            <RadioButton x:Name="rbCSV" Content="Generar CSV" HorizontalAlignment="Left" Margin="93,37,0,0" VerticalAlignment="Top" Checked="rbCSV_Checked"/>
+            <RadioButton x:Name="rbXML" Content="Generar XML" HorizontalAlignment="Left" Margin="0,37,0,0" VerticalAlignment="Top" IsChecked="True" RenderTransformOrigin="0.511,0.068" Checked="rbXML_Checked"/>
+        </Grid>
+        <Grid x:Name="gridContacto" Margin="255,75,10,10">
+            <Label x:Name="lblDatosContacto" Content="Datos del contacto:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label x:Name="lblNombreContacto" Content="Nombre:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,31,0,0"/>
+            <TextBox x:Name="txtNombreContacto" Height="23" Margin="63,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <Label x:Name="lblEmpresaContacto" Content="Empresa:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,62,0,0"/>
+            <TextBox x:Name="txtEmpresaContacto" Height="23" Margin="63,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <Label x:Name="lblTlfPrincipalContacto" Content="Teléfono principal:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,94,0,0"/>
+            <TextBox x:Name="txtTlfPrincipalContacto" Height="23" Margin="124,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <Label x:Name="lblTlfSecundarioContacto" Content="Teléfono secundario:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,125,0,0"/>
+            <TextBox x:Name="txtTlfSecundarioContacto" Height="23" Margin="124,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <Label x:Name="lblCumpleañosContacto" Content="Cumpleaños:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,187,0,0"/>
+            <Label x:Name="lblEmailContacto" Content="Email:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,156,0,0"/>
+            <TextBox x:Name="txtEmailContacto" Height="23" Margin="46,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <DatePicker x:Name="DatePickerContacto" Margin="83,188,0,0" VerticalAlignment="Top" Height="27"/>
+            <Label x:Name="lblAnotacionContacto" Content="Anotación:" HorizontalAlignment="Left" Margin="0,219,0,0" Height="24" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtAnotacionContacto" Margin="72,220,0,0" TextWrapping="Wrap" Height="23" VerticalAlignment="Top"/>
+            <Button x:Name="btnAddContacto" Content="Añadir contacto" Margin="0,248,0,0" Height="25" VerticalAlignment="Top" Click="btnAddContacto_Click" HorizontalAlignment="Right" Width="108"/>
+            <Button x:Name="btnDeleteContacto" Content="Eliminar contacto" Margin="0,248,113,0" Height="25" VerticalAlignment="Top" Click="btnDeleteContacto_Click" HorizontalAlignment="Right" Width="115"/>
+            <Button x:Name="btnLeerVozContacto" Content="Leer con voz" Margin="0,248,233,0" Height="25" VerticalAlignment="Top" Click="btnLeerVozContacto_Click"/>
+        </Grid>
+
+    </Grid>
+</Window>
