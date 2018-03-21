@@ -1,6 +1,8 @@
 # Contact Wizard
 Utilidad de escritorio todo-en-uno para leer y generar estructuras de datos en XML relacionadas con agendas de contacto, tanto personales como profesionales.
 
+![](https://github.com/pedrytus/ContactWizard/blob/master/graphics/contactwizard.jpg "Contact Wizard en funcionamiento.")
+
 ## Motivación
 Desarrollado y diseñado explícitamente para la asignatura Software y Estándares Web por Pedro Blanco, estudiante de Ingeniería Informática del Software en la Universidad de Oviedo.
 _Noviembre 2016. Versión experimental v0.1._
